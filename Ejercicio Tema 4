@@ -1,0 +1,50 @@
+public class Main {
+
+    public static void main(String[] args) {
+        int numeroiF = 22;
+        int numeroWhile = 2;
+        var estacion = "pato";
+
+
+        if (numeroiF < 0) {
+            System.out.println("Negativo");
+        } else if (numeroiF > 0) {
+            System.out.println("Positivo");
+        } else {
+            System.out.println("Es zero!!");
+
+        }
+
+        while(numeroWhile < 3){
+            System.out.println(numeroWhile);
+            numeroWhile++;
+        }
+        do{
+            System.out.println(numeroWhile);
+            numeroWhile++;
+        }while (numeroWhile < 3);
+
+        for (int numeroFor = 0; numeroFor <= 3; numeroFor = numeroFor + 1){
+            System.out.println(numeroFor);
+
+        }
+        switch (estacion){
+            case "Primavera":
+                System.out.println("Es primavera!");
+                break;
+            case "Verano":
+                System.out.println("Es verano!");
+                break;
+            case "Otoño":
+                System.out.println("Es Otoño!");
+                break;
+            case "Invierno":
+                System.out.println("Es Invierno!");
+                break;
+            default:
+                System.out.println("No es una estación");
+        }
+    }
+}
+
+
