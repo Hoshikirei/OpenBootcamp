@@ -1,0 +1,23 @@
+package OBJ;
+
+import java.sql.SQLOutput;
+
+public class Funciones {
+    public static double calcularIVA(double p){
+        double IVA = p * 0.19;
+        return IVA;
+    }
+    public static void main(String[] args) {
+        SQLOutput lector = new SQLOutput(System.in);
+
+        double precioUnitario, IVA;
+
+        System.out.println("Ingrese precio unitario: ");
+        precioUnitario = lector.nextDouble();
+
+        IVA = calcularIVA(precioUnitario);
+        System.out.println("El precio con (IVA incluido) es de: "+ (precioUnitario+IVA));
+
+
+        }
+    }
