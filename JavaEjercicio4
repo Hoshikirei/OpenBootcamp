@@ -1,0 +1,31 @@
+package OBJ;
+
+public class SmartDevice {
+    private int price;
+    String fabricante;
+    String modelo;
+    int precio;
+
+
+
+    public static void main(String[] args) {
+        SmartDevice SmartPhone = new SmartDevice("Samsung", "Galaxy S22", 2000);
+        SmartDevice SmartWatch = new SmartDevice("Apple","AppleWatch", 80);
+        System.out.println(SmartPhone.fabricante);
+        System.out.println(SmartWatch.fabricante);
+        System.out.println(SmartPhone.modelo);
+        System.out.println(SmartWatch.modelo);
+        System.out.println(SmartPhone.precio);
+        System.out.println(SmartWatch.precio);
+
+    }
+
+
+
+    public SmartDevice(String fabricante, String modelo, int precio){
+        this.fabricante = fabricante;
+        this.modelo = modelo;
+        this.precio = precio;
+
+    }
+}
