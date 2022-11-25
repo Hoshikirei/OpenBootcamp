@@ -1,0 +1,113 @@
+package Interfaces;
+import Interfaces.coninterfaces.CocheCRUDImpl;
+
+import java.sql.SQLOutput;
+import java.util.List;
+
+public class Main {
+    public static void main(String[] args) {
+
+     CocheCRUD cocheCRUD = new CocheCRUDImpl();
+
+     Coche Onix = new Coche("Chevrolet","2022", 250.000, true);
+     Coche Minicooper = new Coche("Mini","2022", 2250.000, false);
+     Coche Clio = new Coche("Renault","2021", 150.000, true);
+     Coche Polo = new Coche("Volkswaggen","2002", 50.000, true);
+
+     System.out.println(Onix);
+     System.out.println(Minicooper);
+     System.out.println(Clio);
+     System.out.println(Polo);
+
+
+     cocheCRUD.save(Onix);
+     cocheCRUD.save(Minicooper);
+     cocheCRUD.save(Clio);
+     cocheCRUD.save(Polo);
+
+     List<Coche> coches =cocheCRUD.findAll();
+     System.out.println(coches);
+
+    }
+
+
+}
+
+package Interfaces.coninterfaces;
+
+import Interfaces.Coche;
+
+import java.util.List;
+
+public interface CocheCRUD {
+
+    void save(Coche coches);
+    List<Coche> findAll();
+    void delete(Coche coches);
+
+    public static void main(String[] args) {
+
+
+    }
+}
+
+package Interfaces.coninterfaces;
+
+import Interfaces.Coche;
+
+import java.util.List;
+
+public class CocheCRUDImpl extends Interfaces.CocheCRUD implements CocheCRUD{
+
+    @Override
+    public void save(Coche coches) {
+
+    }
+    
+
+
+    @Override
+    public List<Coche> findAll() {
+        return null;
+    }
+
+    @Override
+    public void delete(Coche coches) {
+
+    }
+}
+
+
+package Interfaces;
+
+public class Coche {
+
+    //1. atributos
+      String marca;
+      String modelo;
+      Double precio;
+      boolean vendido;
+
+      //2. constructores
+    public Coche(){}
+
+    public Coche(String marca, String modelo, Double precio, boolean vendido) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.precio = precio;
+        this.vendido = vendido;
+    }
+    //3. metodos
+
+
+    @Override
+    public String toString() {
+        return "Coche{" +
+                "marca='" + marca + '\'' +
+                ", modelo='" + modelo + '\'' +
+                ", precio=" + precio +
+                ", vendido=" + vendido +
+                '}';
+    }
+}
+
